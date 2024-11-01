@@ -6,11 +6,11 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:18:19 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/27 15:41:52 by irfei            ###   ########.fr       */
+/*   Updated: 2024/10/31 19:40:33 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
 
