@@ -6,33 +6,38 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:18:39 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/27 15:24:41 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/02 18:19:43 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#define LONG_MAX 9223372036854775807L
+#define LONG_MIN -9223372036854775808L
+#include "libc.h"
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {
-	int	sign;
-	int	result;
 	int	i;
+	int	result;
+	int	sing;
 
-	i = 0;
-	sign = 1;
 	result = 0;
+	sing = 1;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			sign = sign * -1;
+	if (str[i] == '-')
+		sing = -1;
+	if (str[i] == '-' || str[i] == '+')
 		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		result = result * 10 + (str[i] - '0');
 		i++;
 	}
-	return (result * sign);
+	return (result * sing);
+}
+int	main(void)
+{
+	printf("%d\n", ft_atoi("-9223372036854775808123"));
+	printf("%d\n", atoi("-922337203685477580812"));
 }
