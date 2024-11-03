@@ -1,9 +1,8 @@
-Library		= libft
+NAME		= libft.a
 
 files 	   = ft_strlen \
 			 ft_memmove \
 			 ft_memcpy \
-			 ft_strlcpy \
 			 ft_strlcat \
 			 ft_isalpha \
 			 ft_isdigit \
@@ -16,6 +15,7 @@ files 	   = ft_strlen \
 			 ft_tolower \
 			 ft_strchr \
 			 ft_strrchr \
+			 ft_strlcpy \
 			 ft_strncmp \
 			 ft_memchr \
 			 ft_memcmp \
@@ -35,21 +35,21 @@ files 	   = ft_strlen \
 			 ft_putendl_fd \
 			 ft_putnbr_fd \
 
-Compiler	= gcc
+Compiler	= cc
 
 CmpFlags	= -Wall -Wextra -Werror
 
-OUTN	= $(Library).a
 
 CFILES	= $(files:%=%.c)
 
 OFILES	= $(files:%=%.o)
 
-NAME	= $(OUTN)
 
-$(NAME):
-	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
-	ar -rc $(OUTN) $(OFILES)
+$(NAME): $(OFILES)
+	ar -rcs $(NAME) $(OFILES)
+
+%.o: %.c
+	$(Compiler) $(CmpFlags) -c $< -o $@
 
 all: $(NAME)
 
