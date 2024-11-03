@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:52:52 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/01 18:15:55 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/03 18:35:54 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <strings.h>
+# include <limits.h>
 # include <unistd.h>
 
 // Part 1 - Libc functions
 int		ft_strlen(const char *str);
 int		ft_strlcat(char *dest, char *src, unsigned int size);
-int		ft_atoi(char *str);
+int    ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -48,4 +49,6 @@ char	*ft_strtrim(const char *s1, const char *set);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_itoa(int n);
+void	ft_bzero(void *s, size_t n);
+
 #endif
