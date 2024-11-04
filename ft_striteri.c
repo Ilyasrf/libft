@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:41:59 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/31 19:50:08 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/04 16:45:54 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 	if (!s)
 		return ;
 	len = ft_strlen(s);
-	result = (char *)malloc(sizeof(char) * (len + i));
+	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return ;
 	i = 0;

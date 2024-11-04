@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:40:17 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/27 15:40:20 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/04 16:42:36 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,6 @@ int	length_of_strs(char **strs, int size)
 	return (counter);
 }
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 void	ft_cpy(char *str, char *sep, int *index)
 {
