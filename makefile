@@ -46,7 +46,7 @@ OFILES	= $(files:%=%.o)
 
 
 $(NAME): $(OFILES)
-	ar -rcs $(NAME) $(OFILES)
+	ar rcs $(NAME) $(OFILES)
 
 %.o: %.c
 	$(Compiler) $(CmpFlags) -c $< -o $@
@@ -54,7 +54,6 @@ $(NAME): $(OFILES)
 all: $(NAME)
 
 clean:
-	rm -f $(NAME)
 	rm -f $(OFILES)
 
 fclean: clean
