@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:52:52 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/04 19:08:01 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/04 22:51:03 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,15 @@
 # include <strings.h>
 # include <unistd.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 // Part 1 - Libc functions
 size_t	ft_strlen(const char *str);
-int		ft_strlcat(char *dest, char *src, unsigned int size);
+size_t		ft_strlcat(char *dest, char *src, unsigned int size);
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -52,6 +58,12 @@ char	*ft_itoa(int n);
 void	ft_bzero(void *s, size_t n);
 char	**ft_split(char const *s, char c);
 //Bonus part
+t_list *ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int	ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
+void ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
 
 
 
