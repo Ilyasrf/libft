@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 11:28:33 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/28 12:01:39 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/05 23:17:58 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
-	i = 0;
-	if (!s)
-		return ;
-	while (s[i])
-	{
-		ft_putchar_fd(s[i], fd);
+		ft_putstr_fd(s, fd);
 		ft_putchar_fd('\n', fd);
-		i++;
-	}
 }

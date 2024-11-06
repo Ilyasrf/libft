@@ -6,20 +6,20 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:09:19 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/27 16:10:07 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/06 00:46:59 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *s1)
 {
 	char	*dest;
 	int		i;
 	int		j;
 
 	i = 0;
-	while (src[i])
+	while (s1[i])
 	{
 		i++;
 	}
@@ -29,9 +29,9 @@ char	*ft_strdup(char *src)
 		return (NULL);
 	}
 	j = 0;
-	while (src[j])
+	while (s1[j])
 	{
-		dest[j] = src[j];
+		dest[j] = s1[j];
 		j++;
 	}
 	dest[j] = '\0';
