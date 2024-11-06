@@ -11,6 +11,7 @@ files 	   = ft_strlen \
 			 ft_isprint \
 			 ft_memset \
 			 ft_bzero \
+			 ft_strdup \
 			 ft_toupper \
 			 ft_tolower \
 			 ft_strchr \

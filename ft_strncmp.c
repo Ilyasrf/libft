@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:55:10 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/27 15:55:13 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/06 00:27:28 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
-	if (n == 0)
+	while (i < n && (s1[i] || s2[i]))
 	{
-		while ((s1[i] || s2[i]) && i < n)
-		{
-			if (s1[i] == s2[i])
-				i++;
-			else
-				return (s1[i] - s2[i]);
-		}
+		if ((unsigned char)s1[i] != (unsigned char) s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
 	return (0);
 }

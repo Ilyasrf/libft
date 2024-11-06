@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:47:50 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/05 13:40:08 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/05 17:34:40 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 	t_list	*node;
 	void	*new;
 	if (!lst || !f)
-		return (NULL);
-	// tmp = (t_list *)malloc(sizeof(t_list));
-	// if(!tmp)
-	// 	return (NULL);
+		return (NULL);                                                                                 
 	while(lst != NULL)
 	{
 		new = f(lst->content);
