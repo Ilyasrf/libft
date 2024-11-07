@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:03:21 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/03 19:40:19 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/07 19:52:14 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	char	*str;
 
 	i = 0;
-	if (!s)	
+	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));

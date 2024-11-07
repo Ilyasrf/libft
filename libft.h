@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:52:52 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/06 00:52:06 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/07 19:53:45 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_list
 
 // Part 1 - Libc functions
 size_t				ft_strlen(const char *str);
-size_t ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 int					ft_atoi(const char *str);
 int					ft_isalnum(int c);
@@ -43,7 +43,7 @@ char				*ft_strrchr(const char *str, int c);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-char	*ft_strdup(const char *s1);
+char				*ft_strdup(const char *s1);
 void				*ft_calloc(size_t count, size_t size);
 // Part 2 - Additional functions
 char				*ft_strjoin(char const *s1, char const *s2);
@@ -67,6 +67,6 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
-
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 #endif

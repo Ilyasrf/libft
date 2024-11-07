@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:42:53 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/04 17:31:33 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/07 19:48:05 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,3 @@ char	**ft_split(char const *s, char c)
 	split[j] = NULL;
 	return (split);
 }
-
-// int main()
-// {
-// 	char **arr;
-// 	arr = ft_split(NULL, ' ');
-// 		for (int i = 0; arr[i]; i++)
-// 			printf("%s\n", arr[i]);
-// }
