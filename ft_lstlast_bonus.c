@@ -6,14 +6,15 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 22:41:52 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/06 01:25:33 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/07 19:43:03 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 t_list	*ft_lstlast(t_list *lst)
 {
-	while(lst && lst->next)
+	while (lst && lst->next)
 		lst = lst->next;
 	return (lst);
 }

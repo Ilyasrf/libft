@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:24:46 by irfei             #+#    #+#             */
-/*   Updated: 2024/10/31 19:41:19 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/07 19:50:59 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char *result;
-	size_t len;
-	unsigned int i;
+	char			*result;
+	size_t			len;
+	unsigned int	i;
+
 	if (!s)
 		return (ft_strdup(""));
-
 	len = ft_strlen(s);
 	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)

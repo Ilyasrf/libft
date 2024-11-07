@@ -6,14 +6,15 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 19:41:59 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/06 01:19:21 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/07 19:49:14 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-		size_t	j;
+	size_t	j;
 	size_t	i;
 
 	if (!s || !f)
