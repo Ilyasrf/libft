@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:52:52 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/07 19:53:45 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/10 21:24:35 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
 int					ft_isprint(int c);
-int					ft_strncmp(char *s1, char *s2, unsigned int n);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_memset(void *b, int c, size_t len);
@@ -45,6 +45,9 @@ void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char				*ft_strdup(const char *s1);
 void				*ft_calloc(size_t count, size_t size);
+char				*ft_strnstr(const char *hy, const char *nd, size_t len);
+char				*ft_strchr(const char *str, int c);
+void				*ft_memmove(void *dst, const void *src, size_t len);
 // Part 2 - Additional functions
 char				*ft_strjoin(char const *s1, char const *s2);
 void				ft_putnbr_fd(int n, int fd);

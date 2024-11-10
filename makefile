@@ -1,5 +1,5 @@
 CC		= cc
-FLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror
 NAME	= libft.a
 HEADER	= libft.h
 
@@ -52,9 +52,8 @@ BONUS_SRC = ft_lstnew_bonus.c\
 
 
 BONUS_OBJS = ${BONUS_SRC:.c=.o}
-
 %.o: %.c ${HEADER}
-	${CC} ${FLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
