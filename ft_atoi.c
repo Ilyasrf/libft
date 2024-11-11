@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 12:34:09 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/10 21:10:38 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/11 20:47:01 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int				i;
-	unsigned long	result;
-	int				sign;
+	int					i;
+	unsigned long long	result;
+	int					sign;
 
 	i = 0;
 	result = 0;
@@ -34,20 +34,9 @@ int	ft_atoi(const char *str)
 		result = result * 10 + (str[i] - '0');
 		if (result > LONG_MAX && sign == 1)
 			return (-1);
-		if (result > (unsigned long)LONG_MAX + 1 && sign == -1)
+		if (result > LONG_MAX && sign == -1)
 			return (0);
 		i++;
 	}
-	return ((int)(result * sign));
+	return (result * sign);
 }
-
-// int main()
-// {
-// 	printf("%d\n", ft_atoi("922337203685477580899992233727"));
-// 	printf("%d\n", atoi("9223372036854775808999"));
-// 	printf("%d\n", ft_atoi(" 			--+ 92233asa72036854775807"));
-// 	printf("%d\n", atoi(" 			--+ 92233asa72036854775807"));
-// 	printf("%d\n", ft_atoi("-922337203685499"));
-// 	printf("%d\n", atoi("-922337203685499"));
-// 	return (0);
-// }
