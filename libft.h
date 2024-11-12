@@ -6,16 +6,15 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 12:52:52 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/10 21:24:35 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/12 13:45:56 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <limits.h>
-# include <stdio.h>
 # include <stdlib.h>
-# include <strings.h>
 # include <unistd.h>
 
 typedef struct s_list

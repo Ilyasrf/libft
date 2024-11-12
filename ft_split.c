@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:42:53 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/07 19:48:05 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/12 13:40:58 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i] && j < count_word(s, c) && i < ft_strlen(s))
+	while (s[i] && j < count_word(s, c))
 	{
 		while (s[i] == c && s[i])
 			i++;
