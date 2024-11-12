@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 22:34:59 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/07 19:41:57 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/12 13:37:49 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !new)
+	if (!lst || !new || !*lst)
 		return ;
 	new->next = *lst;
 	*lst = new;

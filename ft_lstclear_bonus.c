@@ -6,7 +6,7 @@
 /*   By: irfei <irfei@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:07:13 by irfei             #+#    #+#             */
-/*   Updated: 2024/11/07 19:42:06 by irfei            ###   ########.fr       */
+/*   Updated: 2024/11/12 13:38:05 by irfei            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!lst || !del)
+	if (!lst || !del || !*lst)
 		return ;
 	while (*lst && lst)
 	{
