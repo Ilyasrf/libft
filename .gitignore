@@ -1,0 +1,14 @@
+# Object files
+*.o
+
+# Libraries
+*.a
+libft.a
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
